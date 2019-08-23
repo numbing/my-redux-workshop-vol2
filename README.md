@@ -21,7 +21,7 @@ type: "DATA_LOADING"
 };
 </code></pre>
 
-##example of redux thunk
+## example of redux thunk
 
 <pre><code>
 import { createStore, applyMiddleware, compose } from "redux";
