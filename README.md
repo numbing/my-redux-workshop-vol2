@@ -2,7 +2,7 @@
 
 ## here is example for action
 
-<code>export const getData = () => dispatch => {
+<pre><code>export const getData = () => dispatch => {
 dispatch(setDataLoading());
 axios.get("https://swapi.co/api/people").then(res =>
 dispatch({
@@ -11,17 +11,19 @@ payload: res.data
 })
 );
 };
-</code>
+</code></pre>
 
-<code>
+<pre><code>
 export const setDataLoading = () => {
 return {
 type: "DATA_LOADING"
 };
 };
-</code>
+</code></pre>
+
 ##example of redux thunk
-<code>
+
+<pre><code>
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducer/indexReducer";
@@ -40,4 +42,4 @@ window.**REDUX_DEVTOOLS_EXTENSION** && window.**REDUX_DEVTOOLS_EXTENSION**()
 
 export default store;
 
-</code>
+</code></pre>
