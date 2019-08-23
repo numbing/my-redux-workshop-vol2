@@ -15,8 +15,10 @@ payload: res.data
 </code>
 
 //
+<code>
 export const setDataLoading = () => {
 return {
 type: "DATA_LOADING"
 };
 };
+</code>
