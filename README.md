@@ -12,3 +12,10 @@ payload: res.data
 })
 );
 };
+
+//
+export const setDataLoading = () => {
+return {
+type: "DATA_LOADING"
+};
+};
