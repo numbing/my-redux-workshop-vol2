@@ -2,7 +2,7 @@
 
 ## here is example for action
 
-export const getData = () => dispatch => {
+<code>export const getData = () => dispatch => {
 
 dispatch(setDataLoading());
 axios.get("https://swapi.co/api/people").then(res =>
@@ -12,6 +12,7 @@ payload: res.data
 })
 );
 };
+</code>
 
 //
 export const setDataLoading = () => {
