@@ -1,5 +1,6 @@
 const initalState = {
-  data: []
+  data: [],
+  weather: []
 };
 
 export const dataReducer = (state = initalState, action) => {
@@ -8,6 +9,18 @@ export const dataReducer = (state = initalState, action) => {
       return {
         ...state,
         data: action.payload
+      };
+    default:
+      return state;
+  }
+};
+
+export const weatherReducer = (state = initalState, action) => {
+  switch (action.type) {
+    case "GET_WEATHER":
+      return {
+        ...state,
+        weather: action.payload
       };
     default:
       return state;

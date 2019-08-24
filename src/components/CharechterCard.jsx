@@ -7,13 +7,15 @@ class CharechterCard extends Component {
       return <h1>Loading..</h1>;
     }
     return (
-      <div>
+      <div className="Information">
         <p>i am card</p>
-        <ul>
-          {this.props.data.map(e => (
+        {this.props.data.map(e => (
+          <ul className="dataWrapper">
             <li key={e.name}>{e.name}</li>
-          ))}
-        </ul>
+            <li key={e.name}>{e.hair_color}</li>
+            <li key={e.name}>{e.birth_year}</li>
+          </ul>
+        ))}
       </div>
     );
   }

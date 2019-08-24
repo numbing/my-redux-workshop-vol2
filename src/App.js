@@ -3,13 +3,22 @@ import "./App.css";
 import { Provider } from "react-redux";
 import Store from "./Store";
 import StarWars from "./components/StarWars";
+import Weather from "./components/Weather";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Provider store={Store}>
-      <div className="App">
-        <StarWars />
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={StarWars} />
+            <Route exact path="/weather" component={Weather} />
+          </Switch>
+        </div>
+      </Router>
     </Provider>
   );
 }
